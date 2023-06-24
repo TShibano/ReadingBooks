@@ -1,1 +1,10 @@
-site_name: My Docs
+site_name: 読書記録
+theme:
+  name: 'gitbook'
+
+nav:
+  - Home: 'index.md'
+  - Databae:
+    - 'おうちで学べるデータベース': 'Database/Database.md'
+  - Python:
+    - 'ハイパフォーマンスPython': 'Python/high-performance-python.md'
