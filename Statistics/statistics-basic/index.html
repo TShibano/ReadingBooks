@@ -99,32 +99,28 @@ Theme by GitBook
 確率変数の各値を取る確率を関数で表現したものを <strong>確率分布</strong> という．</p>
 <h2 id="_3">期待値</h2>
 <p><strong>期待値</strong> とは，確率変数を含む関数の実現値に確率の重みつき平均のことである．</p>
-<p>確率変数 $X$ の実現値を $x$ として，確率分布を $p(x)$ ，確率変数 $X$ を含む関数を $\phi(x)$ とした時に，
+<p>確率変数 <span class="arithmatex">\(X\)</span> の実現値を <span class="arithmatex">\(x\)</span> として，確率分布を <span class="arithmatex">\(p(x)\)</span> ，確率変数 <span class="arithmatex">\(X\)</span> を含む関数を <span class="arithmatex">\(\phi(x)\)</span> とした時に，
 期待値は次の式で計算できる．</p>
-<p>
-<script type="math/tex; mode=display">
+<div class="arithmatex">\[
 E[f(X)] = \int_{\infty}^{\infty}{ \phi(x) p(x) dx}
-</script>
-</p>
+\]</div>
 <p>つまり，期待値計算は積分計算に置き換えることができる．
 プログラミング等を用いて期待値を計算する場合は，数値積分を行う．</p>
 <h3 id="-">期待値計算 -長方形による近似-</h3>
 <p>数値積分には複数の方法があるが，ここでは長方形を用いた方法を説明する．
-これは，積分値，つまり，曲線 $y=f(x)$ と$x$ 軸との間の面積を，幅 $\Delta$ 高さ $f(x_i)$ の細かい長方形の和として近似する方法である．</p>
+これは，積分値，つまり，曲線 <span class="arithmatex">\(y=f(x)\)</span> と<span class="arithmatex">\(x\)</span> 軸との間の面積を，幅 <span class="arithmatex">\(\Delta\)</span> 高さ <span class="arithmatex">\(f(x_i)\)</span> の細かい長方形の和として近似する方法である．</p>
 <p>数式では以下のように書ける．
-ただし，各点$x_{i}$と$x_{i-1}$の間隔は等間隔であり，$x_{i} - x_{i-1} = \Delta$とする．</p>
-<p>
-<script type="math/tex; mode=display">
+ただし，各点<span class="arithmatex">\(x_{i}\)</span>と<span class="arithmatex">\(x_{i-1}\)</span>の間隔は等間隔であり，<span class="arithmatex">\(x_{i} - x_{i-1} = \Delta\)</span>とする．</p>
+<div class="arithmatex">\[
 \int_{\infty}^{\infty}{f(x)dx} \approx \sum_{i_{min}}^{i_{max}}{f(x_i)}\Delta
-</script>
-</p>
+\]</div>
 <p>精度を上げる為には， </p>
 <ul>
-<li>幅 $<code>\Delta</code>$ を小さくする，つまり $<code>\Delta \rightarrow 0</code>$ </li>
-<li>長方形を作る領域を広くする，つまり $<code>x_{i_{min}} \rightarrow -\infty, x_{i_{max}} \rightarrow \infty</code>$ </li>
+<li>幅 <span class="arithmatex">\(<code>\Delta</code>\)</span> を小さくする，つまり <span class="arithmatex">\(<code>\Delta \rightarrow 0</code>\)</span> </li>
+<li>長方形を作る領域を広くする，つまり <span class="arithmatex">\(<code>x_{i_{min}} \rightarrow -\infty, x_{i_{max}} \rightarrow \infty</code>\)</span> </li>
 </ul>
 <p>とすればよい．</p>
-<p>数値積分のイメージは下図である．ある1変数関数 $<code>y = f(x)</code>$ があった時に，下図のように長方形を区切って，長方形の和を積分値とする．</p>
+<p>数値積分のイメージは下図である．ある1変数関数 <span class="arithmatex">\(<code>y = f(x)</code>\)</span> があった時に，下図のように長方形を区切って，長方形の和を積分値とする．</p>
 <p><img alt="numerical integral" src="../images/numerical_integral.png" /></p>
 
 
@@ -152,7 +148,9 @@ E[f(X)] = \int_{\infty}^{\infty}{ \phi(x) p(x) dx}
 
 </div> <!-- end of book-body -->
 <script src="../../js/main.js"></script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="../../src/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="../../search/main.js"></script>
 <script src="../../js/gitbook.min.js"></script>
 <script src="../../js/theme.min.js"></script>
