@@ -4,7 +4,10 @@ theme:
 
 nav:
   - Home: 'index.md'
+  - Statistics:
+    - '統計学基礎': 'Statistics/statistics-basic.md'
   - Databae:
-    - 'おうちで学べるデータベース': 'Database/Database.md'
+    - 'データベース基礎': 'Database/database-basic.md'
   - Python:
-    - 'ハイパフォーマンスPython': 'Python/high-performance-python.md'
+    - 'Python文法': 'Python/python-grammerhigi.md'
+    - 'NumPy': 'Python/numpy.md'
