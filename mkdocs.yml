@@ -9,5 +9,5 @@ nav:
   - Databae:
     - 'データベース基礎': 'Database/database-basic.md'
   - Python:
-    - 'Python文法': 'Python/python-grammerhigi.md'
+    - 'Python文法': 'Python/python-grammer.md'
     - 'NumPy': 'Python/numpy.md'
