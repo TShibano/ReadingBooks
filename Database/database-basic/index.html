@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>データベース基礎 - 読書記録</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.4.3, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../../css/style.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search" />
+</div> <!-- end of book-search-input -->
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href="../.." target="_blank" class="custom-link">読書記録</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="../..">Home</a>
+<li class="header">Statistics</li>
+
+<li>
+<a href="../../Statistics/statistics-basic/" class="">統計学基礎</a>
+</li>
+
+<li class="header">Databae</li>
+
+<li>
+<a href="./" class="active">データベース基礎</a>
+</li>
+
+<li class="header">Python</li>
+
+<li>
+<a href="../../Python/python-grammerhigi.md" class="">Python文法</a>
+</li>
+
+<li>
+<a href="../../Python/numpy/" class="">NumPy</a>
+</li>
+
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="_1">おうちで学べるデータベースのきほん</h1>
+<h2 id="chapter01">Chapter01 データベースって何だろう</h2>
+<ul>
+<li>現代はあらゆるものがデータベース化され、データが蓄積されている</li>
+<li>データベースの基本機能<ul>
+<li>データの検索と更新(登録・修正・削除)</li>
+<li>同時実行制御: 複数ユーザによる更新の整合性の確保</li>
+<li>耐障害性: 壊れにくく、壊れても復旧が可能</li>
+<li>セキュリティ: データベースをいかに上手く隠すか</li>
+</ul>
+</li>
+<li>データベースの種類<ul>
+<li>階層型データベース: 階層構造で管理。</li>
+<li>リレーショナルデータベース: 二次元表で管理</li>
+<li>オブジェクト指向データベース: オブジェクトで管理</li>
+<li>XMLデータベース: XML形式で管理</li>
+<li>NoSQLデータベース: Not Only SQL</li>
+</ul>
+</li>
+</ul>
+<h2 id="chapter02">Chapter02 リレーショナルデータベースって何だろう</h2>
+<p>リレーショナルデータベース(Relational DataBase; RDB)は、下記の特徴を持つ。
+* リレーション、つまり二次元表を使って管理する
+* SQL(Structured Query Language)によるデータの操作が非常に簡単である
+    * SELECT: 検索コマンド
+    * INSERT: 登録コマンド
+    * UPDATE: 更新コマンド
+    * DELETE: 削除コマンド</p>
+<p>データベースを実現するための具体的なソフトウェアのことを、DBMS(DataBase Management System)という。
+DBMSには、OracleやMySQL、PostgresSQLなどがある。</p>
+<p>実際のシステムは、OSとミドルウェアとアプリケーションの3階層のソフトウェアを組み合わせて作られる。
+OSとは、システムが動作するための一番の土台となる機能を提供するソフトウェアである。
+ミドルウェアとは、OSとアプリケーションの間で動くソフトウェアのことである。
+データベースはミドルウェアに属するソフトウェアである。
+アプリケーションとは、業務的な機能を持つようプログラムされたソフトウェアである。
+ユーザが最も頻繁に触るソフトウェアである。</p>
+<p>OSとデータベースは、予算や機能、開発者・運用者のスキルによって組み合わせて使用する。
+データベースとアプリケーションの関係性としては、アプリケーションがユーザとデータベースの間に入っているのが重要である。
+つまり、ユーザがアプリケーションを介してデータベースにアクセスするということであり、これはセキュリティやシステム開発の点で利点がある。</p>
+<h2 id="chapter03">Chapter03 データベースにまつわるお金の話</h2>
+
+
+</section>
+</div> <!-- end of search-noresults -->
+<div class="search-results">
+<div class="has-results">
+
+<h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+<ul class="search-results-list"></ul>
+
+</div> <!-- end of has-results -->
+<div class="no-results">
+
+<h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+
+</div> <!-- end of no-results -->
+</div> <!-- end of search-results -->
+</div> <!-- end of book-search-results -->
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../../js/main.js"></script>
+<script src="../../search/main.js"></script>
+<script src="../../js/gitbook.min.js"></script>
+<script src="../../js/theme.min.js"></script>
+</body>
+</html>
