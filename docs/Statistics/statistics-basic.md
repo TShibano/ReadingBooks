@@ -14,7 +14,7 @@
 期待値は次の式で計算できる．
 
 $$
-E[f(X)] = \int_{\infty}^{\infty}{ \phi(x) p(x) dx}
+E[f(X)] = \int_{-\infty}^{\infty}{ \phi(x) p(x) dx}
 $$
 
 つまり，期待値計算は積分計算に置き換えることができる．
@@ -28,7 +28,7 @@ $$
 ただし，各点$x_{i}$と$x_{i-1}$の間隔は等間隔であり，$x_{i} - x_{i-1} = \Delta$とする．
 
 $$
-\int_{\infty}^{\infty}{f(x)dx} \approx \sum_{i_{min}}^{i_{max}}{f(x_i)}\Delta
+\int_{-\infty}^{\infty}{f(x)dx} \approx \sum_{i_{min}}^{i_{max}}{f(x_i)}\Delta
 $$
 
 精度を上げる為には， 
