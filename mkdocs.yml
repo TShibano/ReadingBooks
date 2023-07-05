@@ -1,4 +1,4 @@
-site_name: 読書記録
+site_name: データ分析勉強まとめ
 
 nav:
   - Home: 'index.md'
