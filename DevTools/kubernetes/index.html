@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-<title>統計学基礎 - 読書記録</title>
+<title>Kubernetes - 読書記録</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <meta name="generator" content="mkdocs-1.4.3, mkdocs-gitbook-1.0.7">
@@ -35,7 +35,7 @@
 <li class="header">Statistics</li>
 
 <li>
-<a href="./" class="active">統計学基礎</a>
+<a href="../../Statistics/statistics-basic/" class="">統計学基礎</a>
 </li>
 
 <li class="header">Databae</li>
@@ -57,15 +57,15 @@
 <li class="header">Development Tools</li>
 
 <li>
-<a href="../../DevTools/git/" class="">Git</a>
+<a href="../git/" class="">Git</a>
 </li>
 
 <li>
-<a href="../../DevTools/gitlab/" class="">GitLab</a>
+<a href="../gitlab/" class="">GitLab</a>
 </li>
 
 <li>
-<a href="../../DevTools/docker/" class="">Docker</a>
+<a href="../docker/" class="">Docker</a>
 </li>
 
 <li class="divider"></li>
@@ -106,36 +106,7 @@ Theme by GitBook
 
 
 
-<h1 id="_1">統計学基礎</h1>
-<h2 id="_2">確率変数</h2>
-<p><strong>確率変数</strong>とは，とりうる各値に確率が与えられている変数のことである．
-例えば，6面のサイコロの出る目は確率変数と考えられる．
-確率変数の各値を取る確率を関数で表現したものを <strong>確率分布</strong> という．</p>
-<h2 id="_3">期待値</h2>
-<p><strong>期待値</strong> とは，確率変数を含む関数の実現値に確率の重みつき平均のことである．</p>
-<p>確率変数 <span class="arithmatex">\(X\)</span> の実現値を <span class="arithmatex">\(x\)</span> として，確率分布を <span class="arithmatex">\(p(x)\)</span> ，確率変数 <span class="arithmatex">\(X\)</span> を含む関数を <span class="arithmatex">\(\phi(x)\)</span> とした時に，
-期待値は次の式で計算できる．</p>
-<div class="arithmatex">\[
-E[f(X)] = \int_{-\infty}^{\infty}{ \phi(x) p(x) dx}
-\]</div>
-<p>つまり，期待値計算は積分計算に置き換えることができる．
-プログラミング等を用いて期待値を計算する場合は，数値積分を行う．</p>
-<h3 id="-">期待値計算 -長方形による近似-</h3>
-<p>数値積分には複数の方法があるが，ここでは長方形を用いた方法を説明する．
-これは，積分値，つまり，曲線 <span class="arithmatex">\(y=f(x)\)</span> と<span class="arithmatex">\(x\)</span> 軸との間の面積を，幅 <span class="arithmatex">\(\Delta\)</span> 高さ <span class="arithmatex">\(f(x_i)\)</span> の細かい長方形の和として近似する方法である．</p>
-<p>数式では以下のように書ける．
-ただし，各点<span class="arithmatex">\(x_{i}\)</span>と<span class="arithmatex">\(x_{i-1}\)</span>の間隔は等間隔であり，<span class="arithmatex">\(x_{i} - x_{i-1} = \Delta\)</span>とする．</p>
-<div class="arithmatex">\[
-\int_{-\infty}^{\infty}{f(x)dx} \approx \sum_{i_{min}}^{i_{max}}{f(x_i)}\Delta
-\]</div>
-<p>精度を上げる為には， </p>
-<ul>
-<li>幅 <span class="arithmatex">\(\Delta\)</span> を小さくする，つまり <span class="arithmatex">\(\Delta \rightarrow 0\)</span> </li>
-<li>長方形を作る領域を広くする，つまり <span class="arithmatex">\(x_{i_{min}} \rightarrow -\infty, x_{i_{max}} \rightarrow \infty\)</span> </li>
-</ul>
-<p>とすればよい．</p>
-<p>数値積分のイメージは下図である．ある1変数関数 <span class="arithmatex">\(y = f(x)\)</span> があった時に，下図のように長方形を区切って，長方形の和を積分値とする．</p>
-<p><img alt="numerical integral" src="../images/numerical_integral.png" /></p>
+
 
 
 </section>

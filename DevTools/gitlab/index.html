@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>GitLab - 読書記録</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="generator" content="mkdocs-1.4.3, mkdocs-gitbook-1.0.7">
+
+<link rel="shortcut icon" href="../../images/favicon.ico" type="image/x-icon">
+<meta name="HandheldFriendly" content="true"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta rel="next" href="" />
+<link href="../../css/style.min.css" rel="stylesheet"> 
+</head>
+
+<body>
+<div class="book">
+<div class="book-summary">
+<div id="book-search-input" role="search">
+<input type="text" placeholder="Type to search" />
+</div> <!-- end of book-search-input -->
+
+<nav role="navigation">
+<ul class="summary">
+<li>
+<a href="../.." target="_blank" class="custom-link">読書記録</a>
+</li>
+<li class="divider"></li>
+<li class="chapter" data-path="">
+<a href="../..">Home</a>
+<li class="header">Statistics</li>
+
+<li>
+<a href="../../Statistics/statistics-basic/" class="">統計学基礎</a>
+</li>
+
+<li class="header">Databae</li>
+
+<li>
+<a href="../../Database/database-basic/" class="">データベース基礎</a>
+</li>
+
+<li class="header">Python</li>
+
+<li>
+<a href="../../Python/typing-hint/" class="">Python文法</a>
+</li>
+
+<li>
+<a href="../../Python/numpy/" class="">NumPy</a>
+</li>
+
+<li class="header">Development Tools</li>
+
+<li>
+<a href="../git/" class="">Git</a>
+</li>
+
+<li>
+<a href="./" class="active">GitLab</a>
+</li>
+
+<li>
+<a href="../docker/" class="">Docker</a>
+</li>
+
+<li class="divider"></li>
+
+
+
+<li><a href="http://www.mkdocs.org">
+Published with MkDocs
+</a></li>
+
+<li><a href="https://github.com/GitbookIO/theme-default">
+Theme by GitBook
+</a></li>
+</ul>
+
+</nav>
+
+</div> <!-- end of book-summary -->
+
+<div class="book-body">
+<div class="body-inner">
+<div class="book-header" role="navigation">
+
+<!-- Title -->
+<h1>
+<i class="fa fa-circle-o-notch fa-spin"></i>
+<a href="." ></a>
+</h1>
+
+</div> <!-- end of book-header -->
+
+<div class="page-wrapper" tabindex="-1" role="main">
+<div class="page-inner">
+<div id="book-search-results">
+<div class="search-noresults">
+
+<section class="normal markdown-section">
+
+
+
+<h1 id="gitlab">GitLabについて</h1>
+<ul>
+<li>"GitLab実践ガイド"(2017年12月情報)を元に作成したため、情報が古い部分があると考えられる。<ul>
+<li>最新の情報を取得して、更新していきたい。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_1">参考文献</h2>
+<ul>
+<li>GitLab実践ガイド DevOpsワークフローの導入と運用</li>
+</ul>
+<h2 id="gitlab_1">GitLabが目指す開発スタイル</h2>
+<h3 id="_2">アプリケーションの開発スタイル</h3>
+<p>アプリケーションの開発は主に4つのフェーズから成り立っている。
+1. 開発ワークフロー: Outputはソースコード
+    1. アイデア
+    2. 課題
+    3. 計画
+    4. コード
+2. 継続的インテグレーション(CI): Outputは確実に動作する成果物
+    1. ビルド
+    2. テスト
+    3. ビュー
+3. 継続的デプロイ(CD): Outputは成果物の安定的なデプロイ
+    1. ステージング
+    2. リリース
+4. フィードバック: 改善プロセス
+    1. フィードバック</p>
+<p>ライフサイクルの各工程を支える開発ツールが存在しており、それらによってDevOpsが実現されている。
+一方で、GitLabは、このライフサイクル全体を一元管理することが出来る。
+つまり、ツールの維持管理にかかる時間を短縮し、開発者がコード作成に時間を費やすことによって、ビジネスアジリティを向上させることができる。</p>
+<h3 id="devops">DevOps</h3>
+<p>DevOpsとは、プロジェクトを成功させるために、組織文化とツールの両面を改善することで、
+ビジネスアジリティ(敏捷性)を向上させ、リスクを低減する活動。
+組織文化とは、メンバのアイデアを素早くビジネスに展開するためのコラボレーションであり、
+ツールとは、継続的改善を実現し、品質を上げ、リスクを低減する開発ツールである。</p>
+<h3 id="convops">ConvOps</h3>
+<p>GitLabは、DevOpsを実施するための開発スタイルとして、ConvDev(Conversational Development)を提唱している。
+ConvDevとは、全メンバがアイデアから展開までのコラボレーションと知識共有を促進し、開発ライフサイクルを加速することである。
+ConvDevを実現するためには、
+現状の課題を洗い出し、チーム間で共通の目標(KPI)とタスクの優先順位を共有した上で、チーム内外の多様性を受け入れてコミュニティへの帰属意識を高めた上で、
+ロードマップを定義する。</p>
+<h2 id="gitlab_2">GitLabとは</h2>
+<h3 id="gitlab_3">GitLabの主な機能</h3>
+<ul>
+<li>統合的なコード管理</li>
+<li>課題とリリースの追跡</li>
+<li>アプリコードの品質向上</li>
+<li>アプリデプロイ管理</li>
+<li>更新のモニタリング</li>
+</ul>
+<h3 id="gitlab_4">GitLabのアーキテクチャ</h3>
+<p>基本アーキテクチャとしては、「Nginx-Unicorn-PostgrSQL」のWeb3層構造である。
+詳細は省略するが、複数のコンポーネントが複雑に連携しあっている。</p>
+<ul>
+<li>主要ミドルウェア<ul>
+<li>Nginx</li>
+<li>Unicorn</li>
+<li>PostgreSQL</li>
+<li>Sidekiq</li>
+<li>Redis</li>
+</ul>
+</li>
+<li>主要アプリケーション<ul>
+<li>GitLab-Rails</li>
+<li>GitLab-Shell</li>
+<li>GitLab-Workhorse</li>
+<li>Gitaly</li>
+</ul>
+</li>
+</ul>
+<h2 id="gitlab_5">GitLabの運用</h2>
+<h3 id="_3">インストール</h3>
+<p>Omnibusパッケージのインストールが推奨されている。
+面倒な設定をせずとも簡単にインストールができる。
+詳細は公式サイトを参照。
+Dockerコンテナも存在するが、大規模環境には向ていないので注意が必要である。</p>
+<h3 id="_4">運用管理</h3>
+<p>管理コマンド
+* <code>gitlab-ctl</code>
+    * プロセス管理や設定の再構成、ログ確認を一元的に操作できるコマンド
+* <code>gitlab-psql</code>
+    * PostgreSQLへ接続するためのコマンド
+* <code>gitlab-rake</code>
+    * Rubyで実装された既定のビルドツールを実行するためのコマンド
+    * バックアップの取得やリストアが可能である。</p>
+<h3 id="gitlab_6">GitLabを利用する準備</h3>
+<ul>
+<li>ユーザ管理<ul>
+<li>管理者による作成 or 自身による作成</li>
+<li>SSH Keyの登録を行う</li>
+</ul>
+</li>
+<li>グループ管理<ul>
+<li>ユーザをグループにまとめて管理することができる</li>
+</ul>
+</li>
+<li>プロジェクト管理<ul>
+<li>GitリポジトリやWikiなど、GitLabに保存するコンテンツはすべてプロジェクト単位で取り扱われる</li>
+<li>ユーザプロジェクトとグループプロジェクトがある</li>
+</ul>
+</li>
+</ul>
+<h2 id="_5">開発ワークフロー</h2>
+<h3 id="gitlab-mattermost">アイデアの共有: GitLab Mattermost</h3>
+<p>Mattermostというオープンソースのチャットツールを活用できる。
+OmnibusパッケージにGitLab Mattermostが含まれており、同一サーバ上にインストールすることが出来る。
+GitLabと連携することで、チャットだけでなく、GitLab上のイベントをGitLab Mattermost上に通知することができる。</p>
+<h3 id="issue-trackerissue-board">課題の管理と開発管理: Issue Tracker/Issue Board</h3>
+<p>チケット管理システムとして、Issue Trackerがある。
+タスクの整理や課題やタスクの一元管理、レポーティングと共有が可能である。
+まず、マイルストーンとラベルを準備したうえで、課題チケット(Issue)を作成する。</p>
+<p>チケット駆動開発(TiDD: Ticket-Driven Development)とは、
+プロジェクトの各タスクをチケットに割り当てながら、開発ワークフローを管理していくスタイルのことである。
+No Ticket, No Commit。
+作業に取り掛かるときは、まずチケットを起票する。</p>
+<h3 id="merge-requestgitlab-flow">開発フローとコード管理: Merge Request/GitLab Flow</h3>
+<p>マージリクエスト(Merge Request)とは、リモートリポジトリのブランチにプッシュした内容をメンバに知らせて、
+レビューを行ってもらうためのチケット機能であり、コミュニケーションの場でもある。
+レビュープロセスを通過することで、品質を担保することができる。
+保護ブランチワークフローとフォークワークフローがある。
+社内では、開発手順やリポジトリ構造が単純な保護ブランチワークフローが推奨される。
+一方で、オープンソース開発で不特定多数の開発者にリポジトリへの書き込み権限を与えないために、フォークワークフローが行われる。</p>
+<p>Merge Requestのコミュニケーション機能
+* WIP(Work In Progress)
+* Merge Conflict
+* Auto Close Issues</p>
+<p>ブランチの作成方法にはいくつかの戦略がある。</p>
+<ul>
+<li>GitHub Flow</li>
+<li>GitLab Flowの環境ブランチ戦略</li>
+<li>GitLab Flowのリリースブランチ戦略</li>
+</ul>
+<h2 id="_6">継続的インテグレーション</h2>
+<h3 id="_7">継続的なビルドとテストの実施</h3>
+<p>継続的インテグレーション導入することで下記のメリットが得られる
+* 品質保持
+* 作業コストの削減
+* 継続的な分析と改善</p>
+<p>GitLabには、ビルドやテスト機能が付随していないが、<strong>GitLab CI/CD</strong> のジョブ機能を用いることで、
+ビルドツールやテストツールと連携したインテグレーションの自動化が可能である。
+GitLab CI/CDは、<code>.gitlab-ci.yml</code>という設定ファイルにジョブを定義した上で、GitLab Runnerを実行することで、ビルド等を行う。
+GitLab CI/CDには以下のような特徴がある。</p>
+<ul>
+<li>マルチプラットフォーム</li>
+<li>Merge Requestとの連携</li>
+<li>並列分散実行</li>
+<li>ロギング機能</li>
+<li>オートスケール</li>
+<li>アーティファクトの管理</li>
+</ul>
+<h2 id="_8">継続的デプロイ</h2>
+<p>安定的なサービスリリースを行うためには、いかに環境の差異をなくし、動的なデプロイメントを実現するかが重要になる。</p>
+<h3 id="_9">デプロイメントパイプライン</h3>
+<p><strong>デプロイメントパイプライン</strong>とは、
+ビルド・単体テスト・デプロイメント・機能テスト・サービスリリース、という各ステージをに対して、全体を通した自動化を行う実装のことである。</p>
+<p>デプロイパイプラインを実装するためには、<strong>GitLab CI/CD Pipeline</strong>が用いられる。
+開発ワークフローやブランチ戦略によって、最適なデプロイパイプラインを構築する必要がある。
+<code>.gitlab-ci.yml</code>内のジョブをステージに分けて編集する。</p>
+<p><strong>Review Apps</strong>とは、レビュー環境を動的に構築する機能である。
+<code>.gitlab-ci.yml</code>を編集する。</p>
+<h2 id="_10">フィードバック</h2>
+<p>システムとビジネスの2つの観点からフィードバックを行うことが、安定的な継続的デリバリの実現には欠かせない。</p>
+<h3 id="_11">システムのパフォーマンス測定</h3>
+<p><strong>GitLab Prometeus</strong>とは、サービスの状態監視やパフォーマンス測定ツールである。
+GitLabサーバの稼働状況や、GitLab CI/CDでデプロイした環境のパフォーマンスを測定してくれる。</p>
+<h3 id="_12">アイデアからビジネスへ</h3>
+<p>DevOpsの改善サイクルでは、アイデアが閃いてからビジネスアプリケーションを展開するまでのパイプラインを迅速化することが重要である。
+その中でも特に、開発メンバ同士で行う、課題の擦り合わせや承認プロセスに要するコミュニケーション工数は、注目すべき改善指標である。
+チームとして最適な開発工数を目指すために、デプロイメントパイプライン工数を可視化する機能として、以下2つがある。</p>
+<ul>
+<li>Cycle Analytics<ul>
+<li>Git+ab Flowの開発プロセスに基づいて各ステージの時間を追跡することが可能</li>
+</ul>
+</li>
+<li>ConvDev Index<ul>
+<li>アプリケーションを作るうえで必要な各機能の利用率を測定する。</li>
+</ul>
+</li>
+</ul>
+<p>さらに、プラットフォーム自体の管理工数を減らすために、<strong>Auto DevOps</strong>という考え方があり、GitLabの注目すべき機能である。
+Auto DevOpsとは、DevOpsプロジェクトを容易に実現するための機能であり、CI/CDプラットフォームがセットアップされた状態ですぐに利用することができる。</p>
+<h2 id="_13">その他</h2>
+<ul>
+<li>ツールを入れただけで効率的な開発ワークフローが出来、コストが下がることはない。<ul>
+<li>コミュニケーションを活性化させ、日々改善していくことが開発ワークフローの効率化につながる</li>
+<li>そのためにも、気軽にコミュニケーションをとれる場を作り出し、作業の見えるかを徹底することが重要。</li>
+</ul>
+</li>
+</ul>
+
+
+</section>
+</div> <!-- end of search-noresults -->
+<div class="search-results">
+<div class="has-results">
+
+<h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+<ul class="search-results-list"></ul>
+
+</div> <!-- end of has-results -->
+<div class="no-results">
+
+<h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+
+</div> <!-- end of no-results -->
+</div> <!-- end of search-results -->
+</div> <!-- end of book-search-results -->
+
+</div> <!-- end of page-inner -->
+</div> <!-- end of page-wrapper -->
+
+</div> <!-- end of body-inner -->
+
+</div> <!-- end of book-body -->
+<script src="../../js/main.js"></script>
+<script src="../../src/js/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="../../search/main.js"></script>
+<script src="../../js/gitbook.min.js"></script>
+<script src="../../js/theme.min.js"></script>
+</body>
+</html>
