@@ -1,0 +1,1 @@
+# 型ヒント(Typing Hint)

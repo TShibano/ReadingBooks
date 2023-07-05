@@ -7,9 +7,12 @@ nav:
   - Databae:
     - 'データベース基礎': 'Database/database-basic.md'
   - Python:
-    - 'Python文法': 'Python/python-grammer.md'
+    - 'Python文法': 'Python/typing-hint.md'
     - 'NumPy': 'Python/numpy.md'
-
+  - Development Tools:
+    - 'Git': 'DevTools/git.md'
+    - 'GitLab': 'DevTools/gitlab.md'
+    - 'Docker': 'DevTools/docker.md'
 
 theme:
   name: gitbook
