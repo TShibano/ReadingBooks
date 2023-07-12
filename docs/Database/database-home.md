@@ -132,17 +132,45 @@ SELECT DISTINCT xxx FROM db1.table1 WHERE yyy='hoge';
 ```
 db1というデータベースのtable1テーブルから(FROM db1.table1)、yyy列が'hoge'である行のうち(WHERE yyy='hoge')、xxx列のみを重複なし(DISTINCT)で抽出する(SELECT xxx\)。
 
-### よく使うSQLコマンド
+### よく使うSQLコマンド(SELECT文)
 
-* `SELECT column1`
+* `SELECT (DISTINCT) column1`
+  * (重複行を省いて)列を選ぶ
 * `FROM db1.table1`
-* `WHERE column1='hoge'`
-* `ORDER BY`
-* `COUNT()`
-* `GROUP BY`
-* `UPDATE`
-* `INSERT`
-* `DELETE`
+  * データベースDBのtable1というテーブルを選ぶ
+* `WHERE col1='hoge' AND col2>100`
+  * 条件に合致する行を抽出する
+* `GROUP BY xxx`
+  * グループに分ける
+* `COUNT(), MIN(), MAX(), SUM(), AVG()`
+  * 関数を用いて集約する
+* `GROUP_CONCAT`
+  * 文字列を集約する
+* `HAVING yyy`
+  * グループ毎に集約した値を条件にしたい場合に使用する
+* `ORDER BY xxx (DESC)`
+  * xxxを基準に並び替える．
+  * DESCがある場合，降順になる．
+
+SELECTを使うSQL文は，必ず次の順番で記述する必要がある．
+1. `SELECT`
+2. `FROM`
+3. `WHERE`
+4. `GROUP BY`
+5. `HAVING`
+6. `ORDER BY`
+
+### データの更新・挿入・削除
+* `UPDATE table1 SET col1=xxx, col2=yyy WHERE 条件;`
+  * データを更新する
+* `INSERT INTO table1 (col1, col2) VALUES (val1, val2);`
+  * データを挿入する
+  * 列名は記述しなくても良いが，その場合，値は列の順番通りに設定する必要がある
+  * 列と値はすべてえ記入しなくてもよく，その場合はデフォルト値が入る
+  * テーブルや列の情報は，`SHOW CREATE TABLE table1`や`DESC table1`で確認できる
+* `DELETE FROM table1 WHERE 条件`
+  * データを削除する
+
 
 ### ビューの作成と副問い合わせ
 
