@@ -132,6 +132,15 @@ SELECT DISTINCT xxx FROM db1.table1 WHERE yyy='hoge';
 ```
 db1というデータベースのtable1テーブルから(FROM db1.table1)、yyy列が'hoge'である行のうち(WHERE yyy='hoge')、xxx列のみを重複なし(DISTINCT)で抽出する(SELECT xxx\)。
 
+### よく使うSQLの操作コマンド
+
+* `SHOW databases;`
+  * データベースの一覧を表示する
+* `SHOW tables;`
+  * データベースに格納されているテーブルの一覧を表示する
+* `USE db1;`
+  * データベースを選択する
+
 ### よく使うSQLコマンド(SELECT文)
 
 * `SELECT (DISTINCT) column1`
@@ -186,8 +195,8 @@ SELECTを使うSQL文は，必ず次の順番で記述する必要がある．
 `CREATE VIEW VIEW_NAME col1 col2 AS SELECT 文;`
 
 
-副問い合わせ(サブクエリ)とは、`SELECT`の結果1つの列と1行からなるテーブル、つまり単一の値のことである。
-副問い合わせは、テーブルのように扱ったり、数値のように扱って条件分に利用したりできる。
+副問い合わせ(サブクエリ)とは、`SELECT`文の中に`SELECT`文を入れ子状態にしたものである．
+副問い合わせは、テーブルのように扱ったり、数値のように扱って条件文に利用したりできる。
 
 結合(join)とは、あるテーブルに別のテーブルの列を持ってくる操作のことである。
 この時、行を合わせるための条件を「結合条件」という。
@@ -201,13 +210,13 @@ SELECTを使うSQL文は，必ず次の順番で記述する必要がある．
     * `SELECT 選択したい列のリスト FROM table1 LEFT OUTER JOIN table2 on 結合条件`
 
 
-## Chapter07 トランザクションと同時実行制御 ~複数のクエリをまとめる~
+## Chapter07 トランザクションと同時実行制御
 
 
-## Chapter08 テーブル設計の基礎 ~テーブルの概念と正規形~
+## Chapter08 テーブル設計の基礎
 
 
-## Chapter09 バックアップとリカバリ ~障害に備える仕組み~
+## Chapter09 バックアップとリカバリ
 
 
-## Appendix パフォーマンスを考えよう ~性能を向上させるために~
+## Appendix パフォーマンスを考えよう
