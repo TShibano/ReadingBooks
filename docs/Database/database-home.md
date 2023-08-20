@@ -278,7 +278,7 @@ DBMSによるが、DDLを発行時に暗黙のコミットがされることが�
    1. どれも起こりえず、最も厳格である。
 
 
-MySQLでは、DBMSで現在主流のMVCC(Multi Versioning Concurrency Control)という技術を用いて。以下の特性を持っている。
+MySQLでは、DBMSで現在主流のMVCC(Multi Versioning Concurrency Control)という技術を用いられており、以下の特性を持っている。
 
 1. 更新と読込は互いにブロックしない(読込と読込もお互いにブロックしない)
 2. 読込内容は、分離レベルにより内容が変わる場合がある
